@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Przykładowa strona internetowa w HTML5">
+    <meta name="author" content="Anna Leś">
+    <title>Zasanie 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Zadanie 5</h1>
+    <h1>Formularz kontaktowy</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Dane osobowe</legend>
+
+        <label for="imieNazwisko">Imię i nazwisko:</label>
+        <input type="text" id="imieNazwisko" name="imieNazwisko" required data-validation-type="text"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+               required autocomplete="email" data-validation-type="email"><br><br>
+
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon"
+               placeholder="+48 123-456-789" data-validation-type="tel"><br><br>
+
+        <label for="dataUrodzenia">Data urodzenia:</label>
+        <input type="date" id="dataUrodzenia" name="dataUrodzenia" required><br><br>
+
+        <label for="haslo">Hasło:</label>
+        <input type="password" id="haslo" name="haslo" minlength="8" required><br><br>
+
+        <label for="potwierdzHaslo">Potwierdź hasło:</label>
+        <input type="password" id="potwierdzHaslo" name="potwierdzHaslo" minlength="8" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferencje i doświadczenie</legend>
+
+        <p>Płeć:</p>
+        <label><input type="radio" name="plec" value="kobieta" required> Kobieta</label>
+        <label><input type="radio" name="plec" value="mezczyzna"> Mężczyzna</label>
+        <label><input type="radio" name="plec" value="inna"> Inna</label><br><br>
+
+        <p>Zainteresowania:</p>
+        <label><input type="checkbox" name="zainteresowania" value="sport"> Sport</label>
+        <label><input type="checkbox" name="zainteresowania" value="muzyka"> Muzyka</label>
+        <label><input type="checkbox" name="zainteresowania" value="technologia"> Technologia</label>
+        <label><input type="checkbox" name="zainteresowania" value="podroze"> Podróże</label>
+        <label><input type="checkbox" name="zainteresowania" value="ksiazki"> Książki</label><br><br>
+
+        <label for="kraj">Kraj:</label>
+        <select id="kraj" name="kraj" required>
+            <option value="">-- Wybierz kraj --</option>
+            <option value="pl">Polska</option>
+            <option value="de">Niemcy</option>
+            <option value="fr">Francja</option>
+            <option value="uk">Wielka Brytania</option>
+            <option value="es">Hiszpania</option>
+            <option value="it">Włochy</option>
+            <option value="us">USA</option>
+            <option value="ca">Kanada</option>
+            <option value="jp">Japonia</option>
+            <option value="au">Australia</option>
+        </select><br><br>
+
+        <label for="doswiadczenie">Poziom doświadczenia:</label>
+        <input type="range" id="doswiadczenie" name="doswiadczenie"
+               min="0" max="10" step="1" value="5"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dodatkowe informacje</legend>
+
+        <label for="cv">Prześlij swoje CV (PDF/DOC):</label>
+        <input type="file" id="cv" name="cv" accept=".pdf, .doc"><br><br>
+
+        <label for="wiadomosc">Twoja wiadomość:</label><br>
+        <textarea id="wiadomosc" name="wiadomosc" rows="5" maxlength="500" placeholder="Wpisz wiadomość..."></textarea><br><br>
+
+        <label for="strona">Twoja strona www (opcjonalnie):</label>
+        <input type="url" id="strona" name="strona"><br><br>
+
+        <label>
+            <input type="checkbox" id="regulamin" name="regulamin" required>
+            Akceptuję regulamin
+        </label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Wyślij</button>
+    <button type="reset">Wyczyść</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
+

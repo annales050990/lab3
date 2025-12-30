@@ -1,0 +1,105 @@
+/*GOOGLE FONTS – IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/*PALETA KOLORÓW (4 KOLORY)*/
+/*
+#2C2C2C – ciemny grafit
+#4A6FA5 – niebieski
+#EAEAEA – jasne tło
+rgba(0, 0, 0, 0.6) – przezroczystość
+*/
+
+/*USTAWIENIA OGÓLNE*/
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* pkt 2, 3 */
+    margin: 0;
+    background-color: #EAEAEA; /* HEX – pkt 6 */
+    color: #2C2C2C;
+    line-height: 1.7; /* pkt 12 */
+}
+
+/*NAGŁÓWEK*/
+header {
+    background-color: rgb(74, 111, 165); /* RGB – pkt 6 */
+    color: white;
+    padding: 20px;
+    text-align: center; /* pkt 9 */
+}
+
+header h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; /* pkt 1, 3 */
+    font-weight: 700; /* pkt 4 */
+    text-transform: uppercase; /* pkt 11 */
+    letter-spacing: 2px; /* pkt 13 */
+    word-spacing: 4px; /* pkt 13 */
+}
+
+/*NAWIGACJA*/
+nav {
+    background-color: hsl(210, 40%, 40%); /* HSL – pkt 6 */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* pkt 10 */
+    font-variant: small-caps; /* pkt 5 */
+}
+
+nav a:hover {
+    text-decoration: underline; /* pkt 10 */
+}
+
+/*GŁÓWNA TREŚĆ*/
+main {
+    background-color: white;
+    padding: 20px;
+}
+
+/*SEKCJE*/
+section {
+    margin-bottom: 30px;
+    text-align: justify; /* pkt 9 */
+}
+
+section p:first-of-type {
+    text-indent: 30px; /* pkt 15 */
+}
+
+/*ARTYKUŁY*/
+article h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; /* pkt 4 */
+    text-transform: capitalize; /* pkt 11 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* pkt 14 */
+}
+
+article h3 {
+    font-weight: 400; /* pkt 4 */
+}
+
+/*ASIDE*/
+aside {
+    background-color: hsla(0, 0%, 0%, 0.08); /* HSLA – pkt 6, 8 */
+    padding: 15px;
+    text-align: right; /* pkt 9 */
+}
+
+/*STOPKA*/
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* RGBA – pkt 6, 8 */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}

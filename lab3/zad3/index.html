@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Przykładowa strona internetowa w HTML5">
+    <meta name="author" content="Anna Leś">
+    <title>Zasanie 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1> Zadanie 3</h1>
+<h1>Część A – Listy</h1>
+
+
+<h2>1. Lista nieuporządkowana – Zalety języka HTML</h2>
+<ul>
+<li>Łatwy do nauki i zrozumienia</li>
+<li>Działa w każdej przeglądarce</li>
+<li>Nie wymaga kompilatora</li>
+<li>Współpracuje z CSS i JavaScript</li>
+<li>Jest podstawą budowy stron internetowych</li>
+</ul>
+
+
+<h2>2. Lista uporządkowana – Kroki tworzenia strony internetowej</h2>
+<ol>
+<li>Określenie celu i struktury strony</li>
+<li>Przygotowanie treści i materiałów graficznych</li>
+<li>Napisanie kodu HTML</li>
+<li>Dodanie stylów CSS</li>
+<li>Testowanie i publikacja w sieci</li>
+</ol>
+
+
+<h2>3. Lista definicji – Podstawowe terminy HTML</h2>
+<dl>
+<dt>&lt;!DOCTYPE&gt;</dt>
+<dd>Deklaracja typu dokumentu – informuje przeglądarkę, w jakiej wersji HTML napisano stronę.</dd>
+<dt>Tag</dt>
+<dd>Podstawowy element składni HTML używany do tworzenia struktury dokumentu.</dd>
+<dt>Atrybut</dt>
+<dd>Dodatkowa informacja o tagu, np. <em>class</em> lub <em>id</em>.</dd>
+<dt>Element</dt>
+<dd>Tag otwierający, zawartość i tag zamykający – np. <code>&lt;p&gt;Tekst&lt;/p&gt;</code>.</dd>
+<dt>Hiperłącze</dt>
+<dd>Odnośnik do innego dokumentu lub strony, tworzony za pomocą tagu <code>&lt;a&gt;</code>.</dd>
+</dl>
+
+
+<h2>4. Lista zagnieżdżona – Elementy strony internetowej</h2>
+<ul>
+<li>Struktura
+<ul>
+<li>Nagłówek strony</li>
+<li>Stopka strony</li>
+</ul>
+</li>
+<li>Zawartość
+<ul>
+<li>Tekst i obrazy</li>
+<li>Multimedia</li>
+</ul>
+</li>
+<li>Stylizacja (CSS)</li>
+</ul>
+
+
+<hr>
+
+
+<h1>Część B – Tabela</h1>
+
+
+<table id="tabela-tagi" class="center">
+<thead>
+<tr>
+<th rowspan="2">Nazwa tagu</th>
+<th rowspan="2">Przeznaczenie</th>
+<th colspan="2">Szczegóły</th>
+</tr>
+<tr>
+<th>Przykład użycia</th>
+<th>Czy wymaga zamknięcia?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;p&gt;</td>
+<td>Tworzy akapit tekstu</td>
+<td><code>&lt;p&gt;To jest akapit&lt;/p&gt;</code></td>
+<td class="center">Tak</td>
+</tr>
+<tr>
+<td>&lt;img&gt;</td>
+<td>Wstawia obraz na stronę</td>
+<td><code>&lt;img src="obraz.jpg" alt="Opis"&gt;</code></td>
+<td class="center">Nie</td>
+</tr>
+<tr>
+<td>&lt;a&gt;</td>
+<td>Tworzy hiperłącze</td>
+<td><code>&lt;a href="strona.html"&gt;Kliknij&lt;/a&gt;</code></td>
+<td class="center">Tak</td>
+</tr>
+<tr>
+<td>&lt;table&gt;</td>
+<td>Definiuje tabelę</td>
+<td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+<td class="center">Tak</td>
+</tr>
+<tr>
+<td>&lt;br&gt;</td>
+<td>Wstawia nową linię</td>
+<td><code>Tekst&lt;br&gt;Nowa linia</code></td>
+<td class="center">Nie</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="4" class="center">Tabela prezentuje przykładowe tagi HTML używane w codziennym kodowaniu.</td>
+</tr>
+</tfoot>
+</table>
+
+<hr>
+
+<h1>Część C – Box Model Demo</h1>
+<section class="box-demo">
+    <div class="content-box">
+        content-box
+        <p>Szerokość faktyczna: 350px</p>
+    </div>
+    <div class="border-box">
+        border-box
+        <p>Szerokość faktyczna: 300px</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+

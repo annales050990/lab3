@@ -1,0 +1,195 @@
+/* Podstawowe style */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* Część A - Transitions */
+
+.transition-buttons button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.bg-hover:hover {
+    background-color: #e74c3c;
+}
+
+.scale-hover:hover {
+    transform: scale(1.2);
+}
+
+.timing-ease {
+    transition: transform 0.5s ease;
+}
+.timing-ease:hover {
+    transform: translateY(-10px);
+}
+
+.timing-ease-in-out {
+    transition: transform 0.6s ease-in-out;
+}
+.timing-ease-in-out:hover {
+    transform: translateY(-10px);
+}
+
+.timing-bezier {
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.timing-bezier:hover {
+    transform: translateY(-10px);
+}
+
+.delay-hover {
+    transition: transform 0.5s ease 0.2s;
+}
+.delay-hover:hover {
+    transform: translateY(-10px);
+}
+
+/* Część B - Transforms 2D */
+.transform-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.transform-boxes div {
+    background-color: #3498db;
+    color: white;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.translate:hover {
+    transform: translate(20px, 20px);
+}
+.rotate:hover {
+    transform: rotate(45deg);
+}
+.scale:hover {
+    transform: scale(1.5);
+}
+.skew:hover {
+    transform: skew(20deg, 10deg);
+}
+.combo:hover {
+    transform: rotate(15deg) scale(1.3) translate(10px, -10px);
+}
+
+/* Część C - Keyframe Animations */
+
+/* Pulse */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.6; }
+}
+.pulse {
+    width: 100px;
+    height: 100px;
+    background: #e74c3c;
+    margin: 20px auto;
+    border-radius: 50%;
+    animation: pulse 1s infinite alternate;
+}
+
+/* Spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #ddd;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Slide In Text */
+@keyframes slidein {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { transform: translateX(10%); opacity: 0.7; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.slidein {
+    font-size: 1.5em;
+    color: #2c3e50;
+    animation: slidein 1s ease-out forwards;
+}
+
+/* Bonus - 3D Card Flip */
+.card-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.card .front {
+    background-color: #3498db;
+    color: white;
+}
+
+.card .back {
+    background-color: #e74c3c;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#loader { display: none; font-weight: bold; }
+#error { color: red; margin: 10px 0; }
+table { border-collapse: collapse; cursor: pointer; }
+td, th { border: 1px solid #333; padding: 6px; }
+tr:hover { background: #eee; }

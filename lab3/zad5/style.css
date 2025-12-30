@@ -1,0 +1,221 @@
+/* Część A – Podstawowa stylizacja */
+
+/* Reset i podstawowe fonty */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Fieldset i legend */
+fieldset {
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0 10px;
+    color: #3498db;
+}
+
+legend::first-letter {
+    font-size: 1.5em;
+}
+
+/* Etykiety */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Pola tekstowe, textarea, select, date, password, email */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Część B – Pseudo-klasy stanów */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.5);
+}
+
+fieldset:focus-within {
+    border-color: #2980b9;
+}
+
+input:required::after {
+    content: "*";
+    color: red;
+    margin-left: 3px;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Część C – Checkbox, Radio i custom */
+
+/* Ukrycie domyślnego wyglądu */
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Radio okrągłe */
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+/* Po zaznaczeniu */
+input[type="checkbox"]:checked::after,
+input[type="radio"]:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hover efekt */
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    border-color: #2980b9;
+}
+
+/* Część D – Przyciski */
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Część E – Range Slider */
+
+input[type="range"] {
+    -webkit-appearance: none;  /* Chrome, Edge, Safari */
+    -moz-appearance: none;     /* Firefox */    
+    width: 100%;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #2980b9;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #2980b9;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+/* Tekst obszar textarea */
+textarea {
+    resize: vertical;
+}
+
+input.valid, textarea.valid, select.valid {
+    border: 2px solid green;
+}
+
+input.invalid, textarea.invalid, select.invalid {
+    border: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 4px;
+}

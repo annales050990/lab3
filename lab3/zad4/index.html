@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Przykładowa strona internetowa w HTML5">
+    <meta name="author" content="Anna Leś">
+    <title>Zasanie 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1> Zadanie 4</h1>
+<!-- NAGŁÓWEK STRONY -->
+<header class="site-header">
+<h1>Moja galeria multimedialna</h1>
+</header>
+
+<!-- PRZYCISK POWRÓT DO GÓRY -->
+<a href="#top" class="back-to-top">↑ Powrót do góry</a>
+
+    <!-- SEKCJA OBRAZÓW -->
+    <section class="media-section">
+    <h2 class="sticky-header">Galeria obrazów</h2>
+    <div class="gallery">
+        <figure class="card">
+            <span class="badge">NEW</span>
+            <a href="#img1">
+                <img id="img1" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" 
+                     alt="Widok gór o wschodzie słońca">
+            </a>
+            <figcaption>Widok gór o wschodzie słońca</figcaption>
+        </figure>
+
+        <figure class="card">
+            <span class="badge">Plaża</span>
+            <a href="#img2">
+                <img id="img2" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" 
+                     alt="Plaża o zachodzie słońca" loading="lazy">
+            </a>
+            <figcaption>Plaża o zachodzie słońca</figcaption>
+        </figure>
+
+        <figure class="card">
+            <span class="badge">Portret</span>
+            <a href="#img3">
+                <img id="img3" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400" 
+                     alt="Portret osoby w naturze">
+            </a>
+            <figcaption>Portret osoby w naturze</figcaption>
+        </figure>
+    </div>
+    </section>
+
+    <!-- SEKCJA WIDEO -->
+    <section class="media-section">
+        <h2 class="sticky-header">Galeria wideo</h2>
+        <video controls width="480" poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=480">
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            <source src="https://samplelib.com/lib/preview/webm/sample-5s.webm" type="video/webm">
+            Twoja przeglądarka nie obsługuje elementu wideo.
+        </video>
+    </section>
+
+    <!-- SEKCJA AUDIO -->
+    <section class="media-section">
+        <h2 class="sticky-header">Galeria audio</h2>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            Twoja przeglądarka nie obsługuje elementu audio.
+        </audio>
+    </section>
+
+    <!-- SEKCJA OSADZONEJ TREŚCI ZEWNĘTRZNEJ -->
+    <section class="media-section">
+        <h2 class="sticky-header">Treść zewnętrzna</h2>
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Film z YouTube"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="no-referrer"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- LIGHTBOX - efekt powiększenia obrazu -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="close">×</a>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Widok gór">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">×</a>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Plaża">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">×</a>
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800" alt="Portret">
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
